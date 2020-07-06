@@ -9,7 +9,6 @@ class BookAdmin(admin.ModelAdmin):
 
     list_display = ('title', 'author_full_name', 'price')
     fields = ('ISBN', 'title', 'description', 'year_release', 'author', 'price', 'publisher')
-    
 
 
 @admin.register(Maker)
@@ -38,3 +37,7 @@ class FriendAdmin(admin.ModelAdmin):
 
     list_display = ('friend_name', 'book')
     fields = ('friend_name', 'book')
+
+    class Meta:
+        verbose_name = "Друг"
+        verbose_name_plural = "Друг"
