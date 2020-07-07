@@ -64,7 +64,7 @@ def publisher_list(request):
 
     book_publisher = {}
     for p in publishers:
-        book_publisher[p.name] = Book.objects.filter(publisher=p)
+        book_publisher[p.name] = Book.objects.filter(publishers=p)
 
     data = {
         'publisher': publishers,
